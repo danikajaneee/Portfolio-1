@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffccff; /* Pink background */
+            color: #4c4c4c; /* Font color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .portfolio-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        /* Animating the sliding transition */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .portfolio-item h2 {
+            padding: 20px;
+            text-align: center;
+            background-color: #ff80ff; /* Slightly darker pink */
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .portfolio-item .content {
+            padding: 20px;
+        }
+
+        .portfolio-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <h2>Project 1</h2>
+            <div class="content">
+                <!-- Add your content here -->
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <h2>Project 2</h2>
+            <div class="content">
+                <!-- Add your content here -->
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <h2>Project 3</h2>
+            <div class="content">
+                <!-- Add your content here -->
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <h2>Project 4</h2>
+            <div class="content">
+                <!-- Add your content here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
